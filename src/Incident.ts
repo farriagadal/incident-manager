@@ -1,4 +1,4 @@
-class Incident {
+export class Incident {
   id: number;
   description: string;
   status: 'open' | 'solved';

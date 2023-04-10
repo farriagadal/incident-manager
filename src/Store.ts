@@ -1,4 +1,6 @@
-class Store {
+import { Incident } from './Incident';
+
+export class Store {
   incidents: Incident[];
 
   constructor() {
