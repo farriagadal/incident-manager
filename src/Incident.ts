@@ -12,4 +12,16 @@ class Incident {
     this.createdAt = new Date();
     this.solvedAt = null;
   }
+
+  solve() {
+    this.status = 'solved';
+    this.solvedAt = new Date();
+  }
+
+  getSolutionTime(): number | null {
+    if (this.status === 'solved' && this.solvedAt) {
+      return (this.solvedAt.getTime() - this.createdAt.getTime()) / 1000;
+    }
+    return null;
+  }
 }
