@@ -18,6 +18,10 @@ export class Incident {
     this.solvedAt = new Date();
   }
 
+  isSolved(): boolean {
+    return this.solvedAt !== null;
+  }
+
   getSolutionTime(): number | null {
     if (this.status === 'solved' && this.solvedAt) {
       return (this.solvedAt.getTime() - this.createdAt.getTime()) / 1000;
